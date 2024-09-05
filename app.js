@@ -15,8 +15,12 @@ const app = express();
 // connect database
 connectMongodb();
 
-// third-party middleware
-app.use(cors({ origin: "*" }));
+
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://inspira-blog-me.vercel.app'], 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+}));
+
 app.use(express.json({ limit: "500mb" }));
 app.use(bodyParser.urlencoded({ limit: "500mb", extended: true }));
 app.use(morgan("dev"));
