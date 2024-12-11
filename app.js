@@ -17,7 +17,7 @@ connectMongodb();
 
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://inspira-blog-me.vercel.app','https://inspirablog.web.id','http://localhost:4200'], 
+  origin: ['http://localhost:5173', 'https://inspira-blog-me.vercel.app','https://inspirablog.web.id','http://localhost:4200','http://localhost:8100'], 
   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
 }));
 
